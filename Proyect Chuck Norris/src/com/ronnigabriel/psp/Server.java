@@ -35,16 +35,19 @@ public class Server {
         }
 
         try (
-                // Instancia del monitor de ChuckNorris (Numero maximo de clientes concurrentes)
-
                 // Instancia del ServerSocket
                 ServerSocket serverSocket = new ServerSocket(portNumber);
         ) {
-            Channel channel = new Channel();
+
+            // Instancia del monitor de ChuckNorris (Numero maximo de clientes concurrentes)
+            ChuckNorrisMonitor chuckNorrisMonitor  = new ChuckNorrisMonitor();
+
+
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.printf("%s connected%n", clientSocket.toString());
-                PeerConnection peerConnection = new PeerConnection(clientSocket, channel);
+                // Para cada conexion que se crea, le pasamos el clienteSocket y el monitor.
+                PeerConnection peerConnection = new PeerConnection(clientSocket, chuckNorrisMonitor);
                 peerConnection.start();
             }
         } catch (java.net.BindException e) {

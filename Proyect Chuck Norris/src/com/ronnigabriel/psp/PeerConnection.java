@@ -11,14 +11,14 @@ import java.util.Observer;
 public class PeerConnection extends Thread implements Observer {
 
     private final Socket clientSocket;
-    private final Observable channel;
     private final PrintWriter socketOut;
     private final BufferedReader socketIn;
+    private final ChuckNorrisMonitor chuckNorrisMonitor;
 
-    public PeerConnection(Socket clientSocket, Channel channel) throws IOException {
+    public PeerConnection(Socket clientSocket, ChuckNorrisMonitor chuckNorrisMonitor) throws IOException {
         this.clientSocket = clientSocket;
-        this.channel = channel;
-        channel.addObserver(this);
+        this.chuckNorrisMonitor = chuckNorrisMonitor;
+
         socketOut = new PrintWriter(clientSocket.getOutputStream(), true);
         socketIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
@@ -28,12 +28,12 @@ public class PeerConnection extends Thread implements Observer {
         try {
             String line;
             while ((line = socketIn.readLine()) != null) {
-                channel.notifyObservers(line);
+               //  channel.notifyObservers(line);
             }
         } catch (IOException e) {
             System.out.printf("%s disconnected%n", clientSocket);
         } finally {
-            channel.deleteObserver(this);
+           // channel.deleteObserver(this);
             try {
                 socketIn.close();
                 socketOut.close();
