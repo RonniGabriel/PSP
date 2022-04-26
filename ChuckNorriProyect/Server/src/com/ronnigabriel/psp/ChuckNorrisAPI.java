@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ChuckNorrisAPI {
 
 
-    public void random() throws IOException {
+    public  void random() throws IOException {
 
 
     }

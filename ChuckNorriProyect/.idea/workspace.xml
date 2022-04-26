@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28KGktSZ78VneAB8VqZyDlxZ9zg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Compound.Conexion">
+    <configuration name="1.Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
+      <module name="Server" />
+      <option name="PROGRAM_PARAMETERS" value="2050 " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2.Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
+      <module name="Client" />
+      <option name="PROGRAM_PARAMETERS" value="2050 localhost " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Conexion" type="CompoundRunConfigurationType">
+      <toRun name="1.Server" type="Application" />
+      <toRun name="2.Client" type="Application" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.1.Server" />
+      <item itemvalue="Application.2.Client" />
+      <item itemvalue="Compound.Conexion" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="" />
+      <created>1650958013414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650958013414</updated>
+    </task>
+    <servers />
+  </component>
+</project>
