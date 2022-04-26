@@ -89,11 +89,11 @@
       <recent name="com.ronnigabriel.psp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.2.Client">
+  <component name="RunManager" selected="Application.1.Server">
     <configuration name="1.Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="untitled104" />
-      <option name="PROGRAM_PARAMETERS" value="2050 localhost" />
+      <option name="PROGRAM_PARAMETERS" value="2050 " />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
