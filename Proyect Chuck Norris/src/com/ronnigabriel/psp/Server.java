@@ -1,12 +1,8 @@
 package com.ronnigabriel.psp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Server {
 
@@ -21,7 +17,7 @@ public class Server {
             System.exit(1);
         }
 
-        int portNumber = 0  ;
+        int portNumber = 0;
         try {
             portNumber = Integer.parseInt(args[0]);
         } catch (NumberFormatException e) {
@@ -36,11 +32,11 @@ public class Server {
 
         try (
                 // Instancia del ServerSocket
-                ServerSocket serverSocket = new ServerSocket(portNumber);
+                ServerSocket serverSocket = new ServerSocket(portNumber)
         ) {
 
             // Instancia del monitor de ChuckNorris (Numero maximo de clientes concurrentes)
-            ChuckNorrisMonitor chuckNorrisMonitor  = new ChuckNorrisMonitor();
+            ChuckNorrisMonitor chuckNorrisMonitor = new ChuckNorrisMonitor();
 
 
             while (true) {
