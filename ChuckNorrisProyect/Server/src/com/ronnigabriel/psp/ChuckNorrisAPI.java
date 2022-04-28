@@ -1,9 +1,9 @@
 package com.ronnigabriel.psp;
+import java.io.*;
 
-import java.io.IOException;
+
 
 public class ChuckNorrisAPI {
-
 
     public  void random() throws IOException {
 
@@ -11,6 +11,7 @@ public class ChuckNorrisAPI {
     }
 
     public void jokeFor(String query) throws IOException {
+
 
 
     }

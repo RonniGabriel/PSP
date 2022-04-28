@@ -14,11 +14,11 @@ public class PeerConnection extends Thread implements Observer {
     private final PrintWriter socketOut;
     private final BufferedReader socketIn;
     private final ChuckNorrisMonitor chuckNorrisMonitor;
+    private String query = "";
 
     public PeerConnection(Socket clientSocket, ChuckNorrisMonitor chuckNorrisMonitor) throws IOException {
         this.clientSocket = clientSocket;
         this.chuckNorrisMonitor = chuckNorrisMonitor;
-
         socketOut = new PrintWriter(clientSocket.getOutputStream(), true);
         socketIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
@@ -28,12 +28,27 @@ public class PeerConnection extends Thread implements Observer {
         try {
             String line;
             while ((line = socketIn.readLine()) != null) {
-               //  channel.notifyObservers(line);
+                //  channel.notifyObservers(line);
+                if (line.startsWith("random")) {
+                    //Llamamos al metodo Randon y que genere el chiste
+                    System.out.println("Chiste random");
+
+                }
+                if (line.startsWith("query:")) {
+                    String query = line.substring("nick".length() + 1);
+                    //Llamamos al metodo Randon y que genere el chiste
+                    System.out.println("Chiste query");
+
+                }else {
+                    System.out.println("No se reconoce dicho comando");
+
+                }
             }
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             System.out.printf("%s disconnected%n", clientSocket);
         } finally {
-           // channel.deleteObserver(this);
+            // channel.deleteObserver(this);
             try {
                 socketIn.close();
                 socketOut.close();
@@ -42,6 +57,7 @@ public class PeerConnection extends Thread implements Observer {
 
             }
         }
+
     }
 
     @Override
@@ -49,3 +65,4 @@ public class PeerConnection extends Thread implements Observer {
         socketOut.println(arg.toString());
     }
 }
+

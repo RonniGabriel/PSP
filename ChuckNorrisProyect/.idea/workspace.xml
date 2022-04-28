@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="" />
+    <list default="true" id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -20,13 +41,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/chat" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Compound.Conexion">
+  <component name="RunManager" selected="Application.2.Client">
     <configuration name="1.Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
@@ -76,5 +103,16 @@
       <updated>1650958013414</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
