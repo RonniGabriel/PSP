@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +32,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28KGktSZ78VneAB8VqZyDlxZ9zg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,13 +46,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/chat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/2.SumaConcurrente" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Application.2.Client">
+  <component name="RunManager" selected="Compound.Conexion Threads">
     <configuration name="1.Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
@@ -68,10 +67,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="2.Client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
+    <configuration name="2.ClientProcess" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2050 localhost " />
+      <option name="PROGRAM_PARAMETERS" value="localhost  2050 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -82,15 +81,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Conexion" type="CompoundRunConfigurationType">
+    <configuration name="2.ClientThreads" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainThreads" />
+      <module name="Client" />
+      <option name="PROGRAM_PARAMETERS" value="localhost 2060" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Conexion Procesos" type="CompoundRunConfigurationType">
       <toRun name="1.Server" type="Application" />
-      <toRun name="2.Client" type="Application" />
+      <toRun name="2.ClientProcess" type="Application" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Conexion Threads" type="CompoundRunConfigurationType">
+      <toRun name="1.Server" type="Application" />
+      <toRun name="2.ClientThreads" type="Application" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.1.Server" />
-      <item itemvalue="Application.2.Client" />
-      <item itemvalue="Compound.Conexion" />
+      <item itemvalue="Application.2.ClientProcess" />
+      <item itemvalue="Application.2.ClientThreads" />
+      <item itemvalue="Compound.Conexion Procesos" />
+      <item itemvalue="Compound.Conexion Threads" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
