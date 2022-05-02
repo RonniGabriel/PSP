@@ -1,67 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="">
+    <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
->>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="28KGktSZ78VneAB8VqZyDlxZ9zg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/2.SumaConcurrente" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Compound.Conexion Threads">
+  <component name="RunManager" selected="Compound.Conexion">
     <configuration name="1.Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
-      <option name="PROGRAM_PARAMETERS" value="2050 " />
+      <option name="PROGRAM_PARAMETERS" value="2080" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -72,10 +37,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="2.ClientProcess" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
+    <configuration name="2.Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="localhost  2050 " />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -86,40 +51,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="2.ClientThreads" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainThreads" />
-      <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="localhost 2060" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Conexion Procesos" type="CompoundRunConfigurationType">
+    <configuration name="Conexion" type="CompoundRunConfigurationType">
       <toRun name="1.Server" type="Application" />
-      <toRun name="2.ClientProcess" type="Application" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Conexion Threads" type="CompoundRunConfigurationType">
-      <toRun name="1.Server" type="Application" />
-      <toRun name="2.ClientThreads" type="Application" />
+      <toRun name="2.Client" type="Application" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.2.Client" />
       <item itemvalue="Application.1.Server" />
-      <item itemvalue="Application.2.ClientProcess" />
-      <item itemvalue="Application.2.ClientThreads" />
-      <item itemvalue="Compound.Conexion Procesos" />
-      <item itemvalue="Compound.Conexion Threads" />
+      <item itemvalue="Compound.Conexion" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="687a9921-3ec9-45a7-acf4-3a03f3ce09f0" name="Changes" comment="" />
-      <created>1650958013414</created>
+      <changelist id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="" />
+      <created>1651492020750</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1650958013414</updated>
+      <updated>1651492020750</updated>
     </task>
     <servers />
   </component>
