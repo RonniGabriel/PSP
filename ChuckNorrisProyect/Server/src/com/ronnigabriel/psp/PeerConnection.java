@@ -35,7 +35,7 @@ public class PeerConnection extends Thread implements Observer {
 
                 }
                 if (line.startsWith("query:")) {
-                    String query = line.substring("nick".length() + 1);
+                    String query = line.substring("query:".length() + 1);
                     //Llamamos al metodo Randon y que genere el chiste
                     System.out.println("Chiste query");
 

@@ -7,11 +7,9 @@ public class ChuckNorrisAPI {
 
     public  void random() throws IOException {
 
-
     }
 
     public void jokeFor(String query) throws IOException {
-
 
 
     }
