@@ -28,27 +28,29 @@ public class PeerConnection extends Thread implements Observer {
         try {
             String line;
             while ((line = socketIn.readLine()) != null) {
-                //  channel.notifyObservers(line);
+                ChuckNorrisAPI downloader =   chuckNorrisMonitor.getDownloader();
+
                 if (line.startsWith("random")) {
-                    //Llamamos al metodo Randon y que genere el chiste
-                    System.out.println("Chiste random");
+                    // Llamamos al metodo random
+                   socketOut.println(downloader.random());
 
                 }
                 if (line.startsWith("query:")) {
                     String query = line.substring("query:".length() + 1);
                     //Llamamos al metodo Randon y que genere el chiste
-                    System.out.println("Chiste query");
-
+                    downloader.jokeFor(query);
                 }else {
                     System.out.println("No se reconoce dicho comando");
-
                 }
+                chuckNorrisMonitor.endUp();
             }
         } catch (
                 IOException e) {
             System.out.printf("%s disconnected%n", clientSocket);
+        } catch (InterruptedException e) {
+            System.out.printf("%s interrupted%", clientSocket);
         } finally {
-            // channel.deleteObserver(this);
+
             try {
                 socketIn.close();
                 socketOut.close();

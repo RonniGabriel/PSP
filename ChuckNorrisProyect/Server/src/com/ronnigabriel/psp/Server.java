@@ -30,13 +30,17 @@ public class Server {
             System.exit(1);
         }
 
+        // TODO: Leer numero maxmo de clientes concurrentes
+        int maxDownloader = 5;
+
+
         try (
                 // Instancia del ServerSocket
                 ServerSocket serverSocket = new ServerSocket(portNumber)
         ) {
 
             // Instancia del monitor de ChuckNorris (Numero maximo de clientes concurrentes)
-            ChuckNorrisMonitor chuckNorrisMonitor = new ChuckNorrisMonitor();
+            ChuckNorrisMonitor chuckNorrisMonitor = new ChuckNorrisMonitor(maxDownloader);
 
 
             while (true) {

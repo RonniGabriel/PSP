@@ -4,25 +4,30 @@ public class ChuckNorrisMonitor {
 
     // Numero de clientes maximos
 
-    private static final  int _customers = 5;  // Los clientes maximos , tienen que ser concurrentes
-    private int _resources = 0; // Recursos
+    private  final  int _maxCustomers;  // Los clientes maximos , tienen que ser concurrentes
+    private int _customers = 0; // Recursos
 
-    public synchronized void download  (ChuckNorrisAPI chuckNorrisAPI) throws InterruptedException {
-        while (_resources <= _customers ){
+    public ChuckNorrisMonitor( int maxCustomers) {
+        _maxCustomers = maxCustomers;
+    }
+
+    public synchronized ChuckNorrisAPI getDownloader  () throws InterruptedException {
+        while (_customers == _maxCustomers ){
             System.out.printf("There is not enough resources, Thread %s  waiting ");
             wait();
         }
-        _resources --;
+        _customers ++;
         System.out.printf("Thread %s downloading");
         // Instancia de ChuckNorrisApi
+        return new ChuckNorrisAPI();
 
-        notifyAll();
     }
 
-    public synchronized  void endUp (ChuckNorrisAPI chuckNorrisAPI){
-        _resources ++;
+    public synchronized  void endUp (){
+        _customers --;
         System.out.printf("Thread %s end up, There are enough resources");
-        notifyAll();
+        notifyAll(); // Se notifica que sigan los procesos.
+
     }
 
 
