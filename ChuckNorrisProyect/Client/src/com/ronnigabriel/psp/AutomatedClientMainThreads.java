@@ -1,7 +1,5 @@
 package com.ronnigabriel.psp;
 
-import com.sun.corba.se.spi.activation.Server;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,7 +7,8 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class Client {
+public class AutomatedClientMainThreads {
+
     public static void main(String[] args) throws IOException {
         if (args.length < 1) {
             System.err.println("Usage: java Client <port number>");
@@ -42,5 +41,11 @@ public class Client {
             }
         }
 
+        // TODO: Aqui hay que crear el proceso de los sockets  con hilos y que actuen de manera automatica
+
+
+
+
     }
+
 }

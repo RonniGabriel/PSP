@@ -17,20 +17,14 @@ public class ChuckNorrisMonitor {
             wait();
         }
         _customers ++;
-        System.out.printf("Thread %s downloading");
-        // Instancia de ChuckNorrisApi
+        System.out.print("Thread %s downloading");
         return new ChuckNorrisAPI();
-
     }
 
     public synchronized  void endUp (){
         _customers --;
-        System.out.printf("Thread %s end up, There are enough resources");
+        System.out.print("Thread %s end up, There are enough resources");
         notifyAll(); // Se notifica que sigan los procesos.
-
     }
-
-
-
 
 }

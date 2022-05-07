@@ -31,14 +31,11 @@ public class PeerConnection extends Thread implements Observer {
                 ChuckNorrisAPI downloader =   chuckNorrisMonitor.getDownloader();
 
                 if (line.startsWith("random")) {
-                    // Llamamos al metodo random
-                   socketOut.println(downloader.random());
-
+                    socketOut.println(downloader.random());
                 }
                 if (line.startsWith("query:")) {
                     String query = line.substring("query:".length() + 1);
-                    //Llamamos al metodo Randon y que genere el chiste
-                    downloader.jokeFor(query);
+                    socketOut.println(downloader.jokeFor(query));;
                 }else {
                     System.out.println("No se reconoce dicho comando");
                 }

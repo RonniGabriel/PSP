@@ -14,6 +14,6 @@ class ChuckNorrisAPITest {
 
     @org.junit.jupiter.api.Test
     void jokeFor() throws IOException {
-        assertNotNull(new ChuckNorrisAPI().jokeFor("horse rebaños"));
+        assertNotNull(new ChuckNorrisAPI().jokeFor("horse"));
     }
 }

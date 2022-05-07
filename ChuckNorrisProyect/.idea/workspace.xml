@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/Tests/com/ronnigabriel/psp/ChuckNorrisAPITest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Tests/com/ronnigabriel/psp/ChuckNorrisAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Tests/com/ronnigabriel/psp/ChuckNorrisAPITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
@@ -19,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,7 +42,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Segunda Evaluacion/1.URLEncode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/1.word.count" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -87,11 +89,51 @@
       <toRun name="2.Client" type="Application" />
       <method v="2" />
     </configuration>
+    <configuration name="ChuckNorrisAPITest.jokeFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ronnigabriel.psp" />
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.ChuckNorrisAPITest" />
+      <option name="METHOD_NAME" value="jokeFor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChuckNorrisAPITest.random" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ronnigabriel.psp" />
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.ChuckNorrisAPITest" />
+      <option name="METHOD_NAME" value="random" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.2.Client" />
       <item itemvalue="Application.1.Server" />
       <item itemvalue="Compound.Conexion" />
+      <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
+      <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
+        <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
