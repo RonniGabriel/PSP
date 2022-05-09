@@ -8,17 +8,15 @@ import java.net.Socket;
 
 public class AutomatedClient extends Client {
 
-    static int maxClients = 5;
-    static int time = 1;
+
 
     public AutomatedClient() {
         super();
     }
-
-    public static String loop(String[] args) throws IOException {
-
-        String localhost = args[1];
+    public static String loop(String []args ) throws IOException {
         int portNumber = Integer.parseInt(args[0]);
+        String localhost = args[1];
+        int maxClients = Integer.parseInt(args[3]);
         for (int i = 0; i < maxClients; i++) {
             Socket socket = new Socket(localhost, portNumber);
             BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));

@@ -3,11 +3,6 @@ package com.ronnigabriel.psp;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.Socket;
-
-import static com.ronnigabriel.psp.AutomatedClient.loop;
 
 public class AutomatedClientMainProcesses {
 
@@ -30,7 +25,7 @@ public class AutomatedClientMainProcesses {
         }
         // InetAddress localhost = InetAddress.getLocalHost();
 
-        ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), AutomatedClient.loop(args));
+        ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), AutomatedClient.loop());
 
         Process process = processBuilder.start();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
