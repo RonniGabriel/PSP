@@ -15,7 +15,6 @@ public class Client {
             System.err.println("Usage: java Client <port number>");
             System.exit(1);
         }
-
         int portNumber = 0;
         try {
             portNumber = Integer.parseInt(args[0]);
@@ -28,7 +27,6 @@ public class Client {
             System.err.printf("<port number> must be an integer value between %d and %d%n", com.ronnigabriel.psp.Server.MIN_PORT_NUMBER, com.ronnigabriel.psp.Server.MAX_PORT_NUMBER);
             System.exit(1);
         }
-
         InetAddress localhost = InetAddress.getLocalHost();
         try (Socket socket = new Socket(localhost, portNumber);
              BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));

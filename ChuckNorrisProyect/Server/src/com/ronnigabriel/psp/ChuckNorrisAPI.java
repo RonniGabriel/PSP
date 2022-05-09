@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class ChuckNorrisAPI {
 
-    public String  random() throws IOException {
+    public static String  random() throws IOException {
         URL url = new URL("https://api.chucknorris.io/jokes/random");
         URLConnection hc = url.openConnection();
         hc.setRequestProperty("User-Agent", "com.juanagui.psp");

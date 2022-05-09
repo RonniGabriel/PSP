@@ -14,7 +14,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        if (args.length < 1) {
+        if (args.length < 3) {
             System.err.println("Usage: java Server <port number>");
             System.exit(1);
         }
@@ -30,11 +30,21 @@ public class Server {
             System.err.printf("<port number> must be an integer value between %d and %d%n", MIN_PORT_NUMBER, MAX_PORT_NUMBER);
             System.exit(1);
         }
-        // TODO: Leer numero maximo de clientes concurrentes
-        int maxDownloader = 5;
 
-
-
+        int maxDownloader = 0;
+        try {
+            maxDownloader = Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            System.err.println("<max downloaders>");
+            System.exit(1);
+        }
+        int timerSeconds = 0;
+        try {
+            timerSeconds= Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            System.err.println("<timer>");
+            System.exit(1);
+        }
         try (
                 // Instancia del ServerSocket
                 ServerSocket serverSocket = new ServerSocket(portNumber)
@@ -42,7 +52,6 @@ public class Server {
 
             // Instancia del monitor de ChuckNorris (Numero maximo de clientes concurrentes)
             ChuckNorrisMonitor chuckNorrisMonitor = new ChuckNorrisMonitor(maxDownloader);
-
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();

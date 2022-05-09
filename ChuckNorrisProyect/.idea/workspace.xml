@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainThreads.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Tests/com/ronnigabriel/psp/ChuckNorrisAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Tests/com/ronnigabriel/psp/ChuckNorrisAPITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
@@ -23,6 +25,14 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,9 +53,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/1.word.count" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -55,11 +65,11 @@
       <recent name="com.ronnigabriel.psp" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.Conexion">
-    <configuration name="1.Server" type="Application" factoryName="Application">
+  <component name="RunManager" selected="Compound.Procesos">
+    <configuration name="1.Server" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
-      <option name="PROGRAM_PARAMETERS" value="2080" />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 3 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -73,7 +83,31 @@
     <configuration name="2.Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost" />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2.ClientProcess" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
+      <module name="Client" />
+      <option name="PROGRAM_PARAMETERS" value="3010 localhost 4 1 " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutomatedClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClient" />
+      <module name="Client" />
+      <option name="PROGRAM_PARAMETERS" value="localhost 3010 4 1 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -87,6 +121,11 @@
     <configuration name="Conexion" type="CompoundRunConfigurationType">
       <toRun name="1.Server" type="Application" />
       <toRun name="2.Client" type="Application" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Procesos" type="CompoundRunConfigurationType">
+      <toRun name="1.Server" type="Application" />
+      <toRun name="2.ClientProcess" type="Application" />
       <method v="2" />
     </configuration>
     <configuration name="ChuckNorrisAPITest.jokeFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -122,14 +161,18 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.2.ClientProcess" />
       <item itemvalue="Application.2.Client" />
       <item itemvalue="Application.1.Server" />
+      <item itemvalue="Application.AutomatedClient" />
+      <item itemvalue="Compound.Procesos" />
       <item itemvalue="Compound.Conexion" />
       <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
       <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AutomatedClient" />
         <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
         <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
       </list>
@@ -156,5 +199,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChuckNorrisProyect$2_Client.ic" NAME="2.Client Coverage Results" MODIFIED="1652003654535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ronnigabriel.psp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ChuckNorrisProyect$1_Server.ic" NAME="1.Server Coverage Results" MODIFIED="1652003653546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ronnigabriel.psp.*</FILTER>
+    </SUITE>
   </component>
 </project>

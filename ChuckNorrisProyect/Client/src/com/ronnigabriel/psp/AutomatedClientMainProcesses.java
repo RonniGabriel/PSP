@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 
+import static com.ronnigabriel.psp.AutomatedClient.loop;
+
 public class AutomatedClientMainProcesses {
 
     public static void main(String[] args) throws IOException {
@@ -21,24 +23,21 @@ public class AutomatedClientMainProcesses {
             System.err.println("<port number> must be an integer value");
             System.exit(1);
         }
+
         if (portNumber < com.ronnigabriel.psp.Server.MIN_PORT_NUMBER || portNumber > com.ronnigabriel.psp.Server.MAX_PORT_NUMBER) {
             System.err.printf("<port number> must be an integer value between %d and %d%n", com.ronnigabriel.psp.Server.MIN_PORT_NUMBER, com.ronnigabriel.psp.Server.MAX_PORT_NUMBER);
             System.exit(1);
         }
-        InetAddress localhost = InetAddress.getLocalHost();
-        try (Socket socket = new Socket(localhost, portNumber);
-             BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-             PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
-             BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))
-        ) {
-            String line;
-            while ((line = stdIn.readLine()) != null) {
-                socketOut.println(line);
-                System.out.println(socketIn.readLine());
-            }
-        }
- // TODO: AQui hay que creaer un proceso recurrente
-    }
+        // InetAddress localhost = InetAddress.getLocalHost();
 
+        ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), AutomatedClient.loop(args));
+
+        Process process = processBuilder.start();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String processResult = bufferedReader.readLine();
+        System.out.println(String.format("Proceso 1 : %s",processResult));
+
+    }
 }
+
 

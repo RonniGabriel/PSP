@@ -13,17 +13,17 @@ public class ChuckNorrisMonitor {
 
     public synchronized ChuckNorrisAPI getDownloader  () throws InterruptedException {
         while (_customers == _maxCustomers ){
-            System.out.printf("There is not enough resources, Thread %s  waiting ");
+            System.out.println("There is not enough resources, Waiting ");
             wait();
         }
         _customers ++;
-        System.out.print("Thread %s downloading");
+        System.out.println("Downloading");
         return new ChuckNorrisAPI();
     }
 
     public synchronized  void endUp (){
         _customers --;
-        System.out.print("Thread %s end up, There are enough resources");
+        System.out.println("End up, There are enough resources");
         notifyAll(); // Se notifica que sigan los procesos.
     }
 

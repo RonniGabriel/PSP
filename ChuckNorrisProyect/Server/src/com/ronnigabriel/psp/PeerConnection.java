@@ -28,15 +28,16 @@ public class PeerConnection extends Thread implements Observer {
         try {
             String line;
             while ((line = socketIn.readLine()) != null) {
-                ChuckNorrisAPI downloader =   chuckNorrisMonitor.getDownloader();
+                ChuckNorrisAPI downloader = chuckNorrisMonitor.getDownloader();
 
                 if (line.startsWith("random")) {
                     socketOut.println(downloader.random());
                 }
-                if (line.startsWith("query:")) {
+                if (line.startsWith("query: ")) {
                     String query = line.substring("query:".length() + 1);
-                    socketOut.println(downloader.jokeFor(query));;
-                }else {
+                    socketOut.println(downloader.jokeFor(query));
+
+                } else {
                     System.out.println("No se reconoce dicho comando");
                 }
                 chuckNorrisMonitor.endUp();
