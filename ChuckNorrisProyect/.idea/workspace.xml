@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +60,11 @@
       <recent name="com.ronnigabriel.psp" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.Procesos">
-    <configuration name="1.Server" type="Application" factoryName="Application" singleton="false">
+  <component name="RunManager" selected="Application.1.Server">
+    <configuration name="1.Server" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 3 " />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -77,7 +78,7 @@
     <configuration name="2.Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost " />
+      <option name="PROGRAM_PARAMETERS" value="localhost 2080 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -88,38 +89,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="2.ClientProcess" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
-      <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="3010 localhost 4 1 " />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AutomatedClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClient" />
-      <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="localhost 3010 4 1 " />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Conexion" type="CompoundRunConfigurationType">
+    <configuration name="Cliente Interactivo" type="CompoundRunConfigurationType">
       <toRun name="1.Server" type="Application" />
       <toRun name="2.Client" type="Application" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Procesos" type="CompoundRunConfigurationType">
-      <toRun name="1.Server" type="Application" />
-      <toRun name="2.ClientProcess" type="Application" />
       <method v="2" />
     </configuration>
     <configuration name="ChuckNorrisAPITest.jokeFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -155,20 +127,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.2.ClientProcess" />
       <item itemvalue="Application.2.Client" />
       <item itemvalue="Application.1.Server" />
-      <item itemvalue="Application.AutomatedClient" />
-      <item itemvalue="Compound.Procesos" />
-      <item itemvalue="Compound.Conexion" />
+      <item itemvalue="Compound.Cliente Interactivo" />
       <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
       <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AutomatedClient" />
-        <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
         <item itemvalue="JUnit.ChuckNorrisAPITest.random" />
+        <item itemvalue="JUnit.ChuckNorrisAPITest.jokeFor" />
       </list>
     </recent_temporary>
   </component>

@@ -29,49 +29,20 @@ public class AutomatedClientThreads extends Thread {
             System.exit(1);
         }
         InetAddress localhost = InetAddress.getLocalHost();
-        Socket socket = new Socket(localhost, portNumber);
+        // TODO PARAMETROS
+        int numClients = 0;
 
-        Thread thread1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try (Socket socket = new Socket(localhost, portNumber);
-                     BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                     PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
-                     BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))
-                ) {
-                    String line;
-                    AutomatedClient.loop();
-                    while ((line = stdIn.readLine()) != null) {
-                        socketOut.println(line);
-                        System.out.println(socketIn.readLine());
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        for (int i = 0; i < numClients; i++) {
+
+            final int thePortNumber = portNumber;
+            Thread thread = new Thread(()->{
+                try (){}
 
             }
-        });
-        Thread thread2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try (Socket socket = new Socket(localhost, portNumber);
-                     BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                     PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
-                     BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))
-                ) {
-                    String line;
-                    AutomatedClient.loop();
-                    while ((line = stdIn.readLine()) != null) {
-                        socketOut.println(line);
-                        System.out.println(socketIn.readLine());
-                    }
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-            }
-        });
+
+        }
 
 
     }

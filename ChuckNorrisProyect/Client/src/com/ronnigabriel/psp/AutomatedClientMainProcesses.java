@@ -3,6 +3,7 @@ package com.ronnigabriel.psp;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.InetAddress;
 
 public class AutomatedClientMainProcesses {
 
@@ -23,16 +24,18 @@ public class AutomatedClientMainProcesses {
             System.err.printf("<port number> must be an integer value between %d and %d%n", com.ronnigabriel.psp.Server.MIN_PORT_NUMBER, com.ronnigabriel.psp.Server.MAX_PORT_NUMBER);
             System.exit(1);
         }
-        // InetAddress localhost = InetAddress.getLocalHost();
 
-        ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), AutomatedClient.loop());
+        InetAddress host = null;
+        int numClients = 0;
 
-        Process process = processBuilder.start();
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-        String processResult = bufferedReader.readLine();
-        System.out.println(String.format("Proceso 1 : %s",processResult));
+        for (int i = 0; i < numClients; i++) {
 
+            ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), String.valueOf(portNumber),host.toString());
+            Process process = processBuilder.start();
+        }
     }
+
+
 }
 
 

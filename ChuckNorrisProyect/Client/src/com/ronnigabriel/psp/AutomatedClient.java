@@ -4,33 +4,45 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
-public class AutomatedClient extends Client {
+public class AutomatedClient  extends Thread{
 
-
-
-    public AutomatedClient() {
+    public AutomatedClient (){
         super();
     }
-    public static String loop(String []args ) throws IOException {
+
+    @Override
+    public void run() {
+        super.run();
+    }
+
+    public static void main(String[] args) throws IOException, InterruptedException {
         int portNumber = Integer.parseInt(args[0]);
-        String localhost = args[1];
-        int maxClients = Integer.parseInt(args[3]);
-        for (int i = 0; i < maxClients; i++) {
-            Socket socket = new Socket(localhost, portNumber);
-            BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
-            {
-                String line;
-                while ((line = stdIn.readLine()) != null) {
-                    socketOut.println(line);
-                    System.out.println(socketIn.readLine());
-                }
+        int maxClients = Integer.parseInt(args[2]);
+        loop(portNumber,InetAddress.getByName(args[1]));
+
+
+    }
+
+    public static String loop(int portNumber, InetAddress host) throws IOException, InterruptedException {
+
+        try (
+                Socket socket = new Socket(host, portNumber);
+                BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true))
+        {
+            while (true) {
+
+                // TOODO PASAR RANDOM POR PARAMETROS
+                Thread.sleep((long) (Math.random() * 1000));
+                socketOut.println("random");
+                System.out.println(socketIn.readLine());
             }
 
-        }    return ChuckNorrisAPI.random();
+        }
 
     }
 }
