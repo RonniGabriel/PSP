@@ -25,8 +25,8 @@ public class AutomatedClientMainProcesses {
             System.exit(1);
         }
 
-        InetAddress host = null;
-        int numClients = 0;
+        InetAddress host = InetAddress.getByName(args[1]);
+        int numClients = Integer.parseInt(args[2]);
 
         for (int i = 0; i < numClients; i++) {
 

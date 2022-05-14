@@ -24,7 +24,6 @@ public class AutomatedClient  extends Thread{
         int maxClients = Integer.parseInt(args[2]);
         loop(portNumber,InetAddress.getByName(args[1]));
 
-
     }
 
     public static String loop(int portNumber, InetAddress host) throws IOException, InterruptedException {

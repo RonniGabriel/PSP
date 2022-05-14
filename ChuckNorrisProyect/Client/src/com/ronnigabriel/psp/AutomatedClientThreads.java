@@ -29,16 +29,33 @@ public class AutomatedClientThreads extends Thread {
             System.exit(1);
         }
         InetAddress localhost = InetAddress.getLocalHost();
-        // TODO PARAMETROS
         int numClients = 0;
 
         for (int i = 0; i < numClients; i++) {
 
-            final int thePortNumber = portNumber;
+             int thePortNumber = portNumber;
             Thread thread = new Thread(()->{
-                try (){}
+                try (Socket socket = new Socket(localhost, thePortNumber);
+                     BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                     PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
 
-            }
+                ) {
+                    String line = "";
+                    while (true){
+                        try {
+                            if ((line = socketIn.readLine()) == null) break;
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        socketOut.println(line);
+                        System.out.println(socketIn.readLine());
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+            });
 
 
 
