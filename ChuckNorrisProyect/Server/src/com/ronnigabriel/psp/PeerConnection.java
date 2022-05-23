@@ -33,8 +33,8 @@ public class PeerConnection extends Thread implements Observer {
                 if (line.startsWith("random")) {
                     socketOut.println(downloader.random());
                 }
-                if (line.startsWith("query: ")) {
-                    String query = line.substring("query:".length() + 1);
+                if (line.startsWith("query")) {
+                    String query = line.substring("query".length() + 1);
                     socketOut.println(downloader.jokeFor(query));
 
                 } else {

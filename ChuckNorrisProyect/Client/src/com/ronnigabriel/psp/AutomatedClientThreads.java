@@ -53,9 +53,8 @@ public class AutomatedClientThreads extends Thread {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-
             });
+
 
 
 

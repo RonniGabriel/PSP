@@ -33,14 +33,14 @@ public class Server {
 
         int maxDownloader = 0;
         try {
-            maxDownloader = Integer.parseInt(args[0]);
+            maxDownloader = Integer.parseInt(args[2]);
         } catch (NumberFormatException e) {
             System.err.println("<max downloaders>");
             System.exit(1);
         }
         int timerSeconds = 0;
         try {
-            timerSeconds= Integer.parseInt(args[0]);
+            timerSeconds= Integer.parseInt(args[3]);
         } catch (NumberFormatException e) {
             System.err.println("<timer>");
             System.exit(1);

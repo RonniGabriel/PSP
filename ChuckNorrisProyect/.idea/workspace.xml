@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../SegundoDAM/PSP/Eva Extraordinaria PSP/1.word.count" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -62,7 +64,7 @@
     <configuration name="1.Server" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost " />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -73,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="2.Client" type="Application" factoryName="Application">
+    <configuration name="2.Client" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
       <module name="Client" />
       <option name="PROGRAM_PARAMETERS" value="2080 localhost  " />
@@ -87,10 +89,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AutomatedClient" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClient" />
+      <module name="Client" />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 random" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ronnigabriel.psp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AutomatedClientMainProcesses" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="3060 localhost 4 1 " />
+      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 random " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -108,6 +124,7 @@
     </configuration>
     <configuration name="Process " type="CompoundRunConfigurationType">
       <toRun name="1.Server" type="Application" />
+      <toRun name="AutomatedClient" type="Application" />
       <toRun name="AutomatedClientMainProcesses" type="Application" />
       <method v="2" />
     </configuration>
@@ -147,6 +164,7 @@
       <item itemvalue="Application.2.Client" />
       <item itemvalue="Application.1.Server" />
       <item itemvalue="Application.AutomatedClientMainProcesses" />
+      <item itemvalue="Application.AutomatedClient" />
       <item itemvalue="Compound.Process " />
       <item itemvalue="Compound.Cliente Interactivo" />
       <item itemvalue="JUnit.ChuckNorrisAPITest.random" />

@@ -10,6 +10,8 @@ import java.net.UnknownHostException;
 
 public class AutomatedClient  extends Thread{
 
+
+
     public AutomatedClient (){
         super();
     }
@@ -21,8 +23,10 @@ public class AutomatedClient  extends Thread{
 
     public static void main(String[] args) throws IOException, InterruptedException {
         int portNumber = Integer.parseInt(args[0]);
-        int maxClients = Integer.parseInt(args[2]);
         loop(portNumber,InetAddress.getByName(args[1]));
+        int maxClients = Integer.parseInt(args[2]);
+        String autoLine = args[4];
+
 
     }
 
@@ -34,10 +38,10 @@ public class AutomatedClient  extends Thread{
                 PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true))
         {
             while (true) {
+                // TODO PASAR RANDOM POR PARAMETROS
 
-                // TOODO PASAR RANDOM POR PARAMETROS
-                Thread.sleep((long) (Math.random() * 1000));
-                socketOut.println("random");
+                Thread.sleep((long) (Math.random()* 1000 ));
+                socketOut.println();
                 System.out.println(socketIn.readLine());
             }
 
