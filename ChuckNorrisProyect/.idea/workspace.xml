@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/Server.java" afterDir="false" />
-    </list>
+    <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
