@@ -58,7 +58,7 @@
     <configuration name="1.Server" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 " />
+      <option name="PROGRAM_PARAMETERS" value="3080 localhost 4 1 " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -72,7 +72,7 @@
     <configuration name="2.Client" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Client" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost  " />
+      <option name="PROGRAM_PARAMETERS" value="3080 localhost  " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -86,7 +86,7 @@
     <configuration name="AutomatedClient" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClient" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 random" />
+      <option name="PROGRAM_PARAMETERS" value="3080 localhost 4 1 random" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
@@ -100,7 +100,7 @@
     <configuration name="AutomatedClientMainProcesses" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.AutomatedClientMainProcesses" />
       <module name="Client" />
-      <option name="PROGRAM_PARAMETERS" value="2080 localhost 4 1 random " />
+      <option name="PROGRAM_PARAMETERS" value="3080 localhost 4 1 random " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ronnigabriel.psp.*" />
