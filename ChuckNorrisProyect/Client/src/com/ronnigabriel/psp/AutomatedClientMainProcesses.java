@@ -26,12 +26,12 @@ public class AutomatedClientMainProcesses {
         }
 
         InetAddress host = InetAddress.getByName(args[1]);
-        int numClients = Integer.parseInt(args[2]);
-
+        int numClients = Integer.parseInt(args[3]);
+        String lineRandom = args[4];
         for (int i = 0; i < numClients; i++) {
 
-            ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), String.valueOf(portNumber),host.toString());
-            Process process = processBuilder.start();
+            ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), String.valueOf(portNumber),host.toString(), String.valueOf(numClients),lineRandom);
+            processBuilder.start();
         }
     }
 
