@@ -30,6 +30,7 @@ public class AutomatedClientThreads extends Thread {
         for (int i = 0; i < numClients; i++) {
 
              int thePortNumber = portNumber;
+             //TODO: guarda estos threads en un array
             Thread thread = new Thread(()->{
                 try {
                     AutomatedClient.loop(thePortNumber,host,textRandom);
@@ -41,7 +42,7 @@ public class AutomatedClientThreads extends Thread {
             });
 
         }
-
+        //TODO: espera a que terminen los threads que has creado y guardado en un array
 
     }
 

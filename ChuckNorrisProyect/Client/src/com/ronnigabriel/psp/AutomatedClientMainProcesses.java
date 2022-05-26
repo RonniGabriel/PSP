@@ -29,7 +29,7 @@ public class AutomatedClientMainProcesses {
         int numClients = Integer.parseInt(args[3]);
         String lineRandom = args[4];
         for (int i = 0; i < numClients; i++) {
-
+            //TODO no uses "user.dir" directamente, tienes que usar [System.getProperty](https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html)
             ProcessBuilder processBuilder = new ProcessBuilder("user.dir", "-cp", "out", AutomatedClient.class.toString(), String.valueOf(portNumber),host.toString(), String.valueOf(numClients),lineRandom);
             processBuilder.start();
         }
