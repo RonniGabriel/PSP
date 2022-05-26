@@ -1,13 +1,7 @@
 package com.ronnigabriel.psp;
 
-import com.sun.org.apache.xpath.internal.objects.XNull;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.InetAddress;
-import java.net.Socket;
 
 public class AutomatedClientThreads extends Thread {
 
@@ -28,35 +22,23 @@ public class AutomatedClientThreads extends Thread {
             System.err.printf("<port number> must be an integer value between %d and %d%n", com.ronnigabriel.psp.Server.MIN_PORT_NUMBER, com.ronnigabriel.psp.Server.MAX_PORT_NUMBER);
             System.exit(1);
         }
-        InetAddress localhost = InetAddress.getLocalHost();
+        InetAddress host = InetAddress.getLocalHost();
         int numClients = 0;
+        String textRandom = args[3];
+
 
         for (int i = 0; i < numClients; i++) {
 
              int thePortNumber = portNumber;
             Thread thread = new Thread(()->{
-                try (Socket socket = new Socket(localhost, thePortNumber);
-                     BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                     PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
-
-                ) {
-                    String line = "";
-                    while (true){
-                        try {
-                            if ((line = socketIn.readLine()) == null) break;
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        socketOut.println(line);
-                        System.out.println(socketIn.readLine());
-                    }
+                try {
+                    AutomatedClient.loop(thePortNumber,host,textRandom);
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             });
-
-
-
 
         }
 

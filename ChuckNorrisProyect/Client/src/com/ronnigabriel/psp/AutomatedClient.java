@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class AutomatedClient  extends Thread{
 
@@ -22,15 +21,16 @@ public class AutomatedClient  extends Thread{
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
+
         int portNumber = Integer.parseInt(args[0]);
-        loop(portNumber,InetAddress.getByName(args[1]));
+
         int maxClients = Integer.parseInt(args[2]);
-        String autoLine = args[4];
-
-
+        String autoLine = args[3];
+        loop(portNumber,InetAddress.getByName(args[1]),autoLine);
     }
 
-    public static String loop(int portNumber, InetAddress host) throws IOException, InterruptedException {
+    public static String loop(int portNumber, InetAddress host, String textRandom) throws IOException, InterruptedException {
+
 
         try (
                 Socket socket = new Socket(host, portNumber);
@@ -38,10 +38,8 @@ public class AutomatedClient  extends Thread{
                 PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true))
         {
             while (true) {
-                // TODO PASAR RANDOM POR PARAMETROS
-
                 Thread.sleep((long) (Math.random()* 1000 ));
-                socketOut.println();
+                socketOut.println(textRandom);
                 System.out.println(socketIn.readLine());
             }
 
