@@ -36,9 +36,6 @@ public class PeerConnection extends Thread implements Observer {
                 if (line.startsWith("query")) {
                     String query = line.substring("query".length() + 1);
                     socketOut.println(downloader.jokeFor(query));
-
-                } else {
-                    System.out.println("No se reconoce dicho comando");
                 }
                 chuckNorrisMonitor.endUp();
             }
