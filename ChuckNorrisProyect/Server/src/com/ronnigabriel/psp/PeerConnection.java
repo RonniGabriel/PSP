@@ -36,30 +36,33 @@ public class PeerConnection extends Thread implements Observer {
                 if (line.startsWith("query")) {
                     String query = line.substring("query".length() + 1);
                     socketOut.println(downloader.jokeFor(query));
+
+                } else{
+                        System.out.println("No se reconoce dicho comando");
+                    }
+                    chuckNorrisMonitor.endUp();
                 }
-                chuckNorrisMonitor.endUp();
-            }
-        } catch (
-                IOException e) {
-            System.out.printf("%s disconnected%n", clientSocket);
-        } catch (InterruptedException e) {
-            System.out.printf("%s interrupted%", clientSocket);
-        } finally {
+            } catch(
+                    IOException e){
+                System.out.printf("%s disconnected%n", clientSocket);
+            } catch(InterruptedException e){
+                System.out.printf("%s interrupted%", clientSocket);
+            } finally{
 
-            try {
-                socketIn.close();
-                socketOut.close();
-                clientSocket.close();
-            } catch (IOException e) {
+                try {
+                    socketIn.close();
+                    socketOut.close();
+                    clientSocket.close();
+                } catch (IOException e) {
 
+                }
             }
+
         }
 
+        @Override
+        public void update (Observable o, Object arg){
+            socketOut.println(arg.toString());
+        }
     }
-
-    @Override
-    public void update(Observable o, Object arg) {
-        socketOut.println(arg.toString());
-    }
-}
 
