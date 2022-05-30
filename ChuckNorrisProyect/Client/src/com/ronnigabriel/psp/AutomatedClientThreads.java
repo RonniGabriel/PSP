@@ -1,7 +1,10 @@
 package com.ronnigabriel.psp;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.InetAddress;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AutomatedClientThreads extends Thread {
 
@@ -29,22 +32,21 @@ public class AutomatedClientThreads extends Thread {
 
         for (int i = 0; i < numClients; i++) {
 
-             int thePortNumber = portNumber;
-             //TODO: guarda estos threads en un array
-            Thread thread = new Thread(()->{
+            int thePortNumber = portNumber;
+            //TODO: guarda estos threads en un array
+            /*List<Thread> clients = new ArrayList<Thread>();
+            Thread client = new Thread();
+*/
+            Thread client = new Thread(() -> {
                 try {
-                    AutomatedClient.loop(thePortNumber,host,textRandom);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
+                    AutomatedClient.loop(thePortNumber, host, textRandom);
+                } catch (IOException | InterruptedException e) {
                     e.printStackTrace();
                 }
-            });
 
-        }
-        //TODO: espera a que terminen los threads que has creado y guardado en un array
+            });
 
     }
 
 
-}
+}}
