@@ -7,30 +7,19 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class AutomatedClient  extends Thread{
+public class AutomatedClient  {
 
-
-
-    public AutomatedClient (){
-        super();
-    }
-
-    @Override
-    public void run() {
-        super.run();
-    }
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
         int portNumber = Integer.parseInt(args[0]);
-
-        int maxClients = Integer.parseInt(args[2]);
-        String autoLine = args[3];
-        loop(portNumber,InetAddress.getByName(args[1]),autoLine);
+        int maxRandom= Integer.parseInt(args[2]);
+        InetAddress address =InetAddress.getByName(args[1]);
+        String id = args[3];
+        loop(portNumber, address,maxRandom,id);
     }
 
-    public static String loop(int portNumber, InetAddress host, String textRandom) throws IOException, InterruptedException {
-
+    public static String loop(int portNumber, InetAddress host , int maxRandom, String id ) throws IOException, InterruptedException {
 
         try (
                 Socket socket = new Socket(host, portNumber);
@@ -38,9 +27,9 @@ public class AutomatedClient  extends Thread{
                 PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true))
         {
             while (true) {
-                Thread.sleep((long) (Math.random()* 1000 ));
-                socketOut.println(textRandom);
-                System.out.println(socketIn.readLine());
+                Thread.sleep((long) (Math.random()* maxRandom ));
+                socketOut.println("random");
+                System.out.println(String.format("Client %s: %s",id, socketIn.readLine()));
             }
 
         }

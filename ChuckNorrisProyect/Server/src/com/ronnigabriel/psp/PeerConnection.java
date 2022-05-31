@@ -22,7 +22,6 @@ public class PeerConnection extends Thread implements Observer {
         socketOut = new PrintWriter(clientSocket.getOutputStream(), true);
         socketIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
-
     @Override
     public void run() {
         try {
@@ -45,7 +44,6 @@ public class PeerConnection extends Thread implements Observer {
         } catch (InterruptedException e) {
             System.out.printf("%s interrupted%", clientSocket);
         } finally {
-
             try {
                 socketIn.close();
                 socketOut.close();
@@ -54,9 +52,7 @@ public class PeerConnection extends Thread implements Observer {
 
             }
         }
-
     }
-
     @Override
     public void update(Observable o, Object arg) {
         socketOut.println(arg.toString());

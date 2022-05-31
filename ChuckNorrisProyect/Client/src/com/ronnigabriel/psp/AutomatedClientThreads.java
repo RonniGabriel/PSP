@@ -25,26 +25,26 @@ public class AutomatedClientThreads extends Thread {
             System.err.printf("<port number> must be an integer value between %d and %d%n", com.ronnigabriel.psp.Server.MIN_PORT_NUMBER, com.ronnigabriel.psp.Server.MAX_PORT_NUMBER);
             System.exit(1);
         }
-        InetAddress host = InetAddress.getLocalHost();
-        int numClients = 0;
-        String textRandom = args[3];
 
-
+        int maxRandom= Integer.parseInt(args[3]);
+        InetAddress  address = InetAddress.getByName(args[1]);
+        int numClients = Integer.parseInt(args[2]);
         for (int i = 0; i < numClients; i++) {
-
             int thePortNumber = portNumber;
             //TODO: guarda estos threads en un array
             /*List<Thread> clients = new ArrayList<Thread>();
             Thread client = new Thread();
 */
+            int finalI = i; // LANDA
             Thread client = new Thread(() -> {
                 try {
-                    AutomatedClient.loop(thePortNumber, host, textRandom);
+                    AutomatedClient.loop(thePortNumber, address, maxRandom,String.valueOf(finalI));
                 } catch (IOException | InterruptedException e) {
                     e.printStackTrace();
                 }
 
             });
+            client.start();
 
     }
 

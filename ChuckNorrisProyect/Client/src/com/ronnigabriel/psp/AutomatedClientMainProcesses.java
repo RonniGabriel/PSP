@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
+import java.nio.file.Paths;
 
 public class AutomatedClientMainProcesses {
 
@@ -25,12 +26,13 @@ public class AutomatedClientMainProcesses {
             System.exit(1);
         }
 
-        InetAddress host = InetAddress.getByName(args[1]);
-        int numClients = Integer.parseInt(args[3]);
-        String lineRandom = args[4];
+        String  host = (args[1]);
+        int numClients = Integer.parseInt(args[2]);
+       int  maxRandom = Integer.parseInt(args[3]) ;
+        String classPath =Paths.get( System.getProperty("user.dir") , "out").toString();
         for (int i = 0; i < numClients; i++) {
 
-            ProcessBuilder processBuilder = new ProcessBuilder(System.getProperty("user.dir"), "-cp", "out", AutomatedClient.class.toString(), String.valueOf(portNumber),host.toString(), String.valueOf(numClients),lineRandom);
+            ProcessBuilder processBuilder = new ProcessBuilder("java", "-cp", classPath, AutomatedClient.class.getName(), String.valueOf(portNumber),host.toString(), String.valueOf(maxRandom), String.valueOf(i)).inheritIO();
             processBuilder.start();
         }
     }
