@@ -31,10 +31,6 @@ public class AutomatedClientThreads extends Thread {
         int numClients = Integer.parseInt(args[2]);
         for (int i = 0; i < numClients; i++) {
             int thePortNumber = portNumber;
-            //TODO: guarda estos threads en un array
-            /*List<Thread> clients = new ArrayList<Thread>();
-            Thread client = new Thread();
-*/
             int finalI = i; // LANDA
             Thread client = new Thread(() -> {
                 try {

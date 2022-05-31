@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8d1179b9-cd6b-4581-aa7e-a98f8d02b1f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientMainProcesses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/com/ronnigabriel/psp/AutomatedClientThreads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/PeerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/com/ronnigabriel/psp/ChuckNorrisAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
       <recent name="com.ronnigabriel.psp" />
     </key>
   </component>
-  <component name="RunManager" selected="Compound.Threads">
+  <component name="RunManager" selected="Compound.Cliente Interactivo">
     <configuration name="1.Server" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="com.ronnigabriel.psp.Server" />
       <module name="Server" />

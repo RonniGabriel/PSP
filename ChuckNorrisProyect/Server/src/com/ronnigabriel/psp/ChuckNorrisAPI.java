@@ -31,7 +31,7 @@ public class ChuckNorrisAPI {
         if(query.length()<4)
             return "Query must be longer than 3";
         query = URLEncoder.encode(query, StandardCharsets.UTF_8.toString());
-        URL url = new URL(String.format("https://api.chucknorris.io/jokes/search?query=",query));
+        URL url = new URL(String.format("https://api.chucknorris.io/jokes/search?query=%s",query));
         URLConnection hc = url.openConnection();
         hc.setRequestProperty("User-Agent", "com.juanagui.psp");
         try (InputStream urlStream = hc.getInputStream()) {
